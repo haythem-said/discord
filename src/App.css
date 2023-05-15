@@ -1,6 +1,9 @@
+@import url('Chat.css');
+@import url('ChatHeader.css');
+
+
 .App{
     display: flex;
-    width: 50%;
 }
 
 
