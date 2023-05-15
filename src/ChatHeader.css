@@ -5,9 +5,44 @@
   color: gray;
   padding: 10px;
 }
-.chatHeaderRight{
+.chatHeaderLeft__hash {
+  font-size: 30px;
+  padding: 10px;
+  color: gray;
+}
+.chatHeaderLeft {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.chatHeaderRight {
+  display: flex;
+  align-items: center;
+}
+
+
+.chatHeaderRight > .MuiSvgIcon-root{
+    padding: 5px;
+    cursor: pointer;
+
+}
+.chatHeaderRight > .MuiSvgIcon-root:hover{
+    color: white;
+
+}
+.chatHeader__search{
     display: flex;
     align-items: center;
+    color: gray;
+    background-color:  #2f3135;
+    border-radius: 3px;
+    padding: 3px;
+}
+.chatHeader__search > input{
+    background: transparent;
+    border: none;
+    color: white;
+    outline-width: 0;
 
 
 }
