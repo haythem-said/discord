@@ -1,90 +1,9 @@
 @import url('Chat.css');
 @import url('ChatHeader.css');
-
-
+@import url('Messenger.css');
+@import url('SideBar.css');
 .App{
     display: flex;
 }
 
 
-.sideBar {
-  display: flex;
-  flex-direction: column;
-  flex: 0.25;
-  background-color: #2f3135;
-  height: 100vh;
-}
-.sideBar__top {
-  display: flex;
-  justify-content: space-between;
-  background-color: #2f3135;
-  align-items: center;
-  padding: 20px;
-  color: white;
-  border-bottom: 3px solid #56575a;
-}
-.sidebar__channels {
-  flex: 1;
-}
-.sideBar__AddChannel {
-  cursor: pointer;
-}
-
-.sideBar__AddChannel:hover {
-  color: white;
-}
-.sideBar__channelsHeader {
-  display: flex;
-  justify-content: space-between;
-  background-color: #2f3135;
-  align-items: center;
-  padding: 18px;
-  color: gray;
-}
-.sideBar__Header {
-  display: flex;
-  align-items: center;
-}
-.sidebarChannel:hover > h4 {
-  color: white;
-  background-color: #56575a;
-}
-.sidebarChannel > h4 {
-  padding-left: 25px;
-  align-items: center;
-  display: flex;
-  color: gray;
-  cursor: pointer;
-}
-.sidebarChannel__hash{
-    font-size: 20px;
-    padding: 15px;
-}
-.voice{
-    border-top: 3px solid #56575a;
-    display: flex;
-    align-items: center;
-    margin: 10px;
-}
-.connection{
-  color: green;
-}
-.voiceConnected{
-    color: green;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
-.call{
-    display: flex;
-    flex-direction: column;
-    padding: 6px;
-    color: gray;
-    cursor: pointer;
-}
-.equqipement{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
