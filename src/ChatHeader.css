@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: space-between;
   color: gray;
-  padding: 10px;
+  padding: 15px;
+  border-bottom: 3px solid #56575a;
 }
 .chatHeaderLeft__hash {
   font-size: 30px;
@@ -20,29 +21,24 @@
   align-items: center;
 }
 
-
-.chatHeaderRight > .MuiSvgIcon-root{
-    padding: 5px;
-    cursor: pointer;
-
+.chatHeaderRight > .MuiSvgIcon-root {
+  padding: 5px;
+  cursor: pointer;
 }
-.chatHeaderRight > .MuiSvgIcon-root:hover{
-    color: white;
-
+.chatHeaderRight > .MuiSvgIcon-root:hover {
+  color: white;
 }
-.chatHeader__search{
-    display: flex;
-    align-items: center;
-    color: gray;
-    background-color:  #2f3135;
-    border-radius: 3px;
-    padding: 3px;
+.chatHeader__search {
+  display: flex;
+  align-items: center;
+  color: gray;
+  background-color: #2f3135;
+  border-radius: 3px;
+  padding: 3px;
 }
-.chatHeader__search > input{
-    background: transparent;
-    border: none;
-    color: white;
-    outline-width: 0;
-
-
+.chatHeader__search > input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline-width: 0;
 }

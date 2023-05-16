@@ -1,0 +1,17 @@
+.message{
+    margin: 30px;
+    display: flex;
+    
+}
+
+.messengerInfo{
+    color: white;
+    align-items: center;
+    display: flex;
+    margin-top: -20px;
+    margin-left: 15px;
+}
+
+.messengerInfo > span{
+    color: darkgray;
+}
