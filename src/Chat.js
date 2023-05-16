@@ -1,6 +1,5 @@
 import React from "react";
 import ChatHeader from "./ChatHeader";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
 import GifIcon from "@mui/icons-material/Gif";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 const Chat = () => {
