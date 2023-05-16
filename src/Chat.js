@@ -1,15 +1,19 @@
 import React from "react";
 import ChatHeader from "./ChatHeader";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
 import GifIcon from "@mui/icons-material/Gif";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
+import Messenger from "./Messenger";
 const Chat = () => {
   return (
     <div className="chat">
       <ChatHeader />
 
       <div className="chatMessages">
-        
+      <Messenger />
+      <Messenger />
+      <Messenger />
+
+
       </div>
 
       <div className="chatInput">

@@ -1,6 +1,7 @@
 @import url("Chat.css");
 @import url("ChatHeader.css");
 @import url('SideBar.css');
+@import url('Messenger.css');
 .App {
   display: flex;
  
