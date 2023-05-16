@@ -1,6 +1,53 @@
-.chat{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-color: #363f3a;
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #363f3a;
+}
+.chatInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: gray;
+  background-color: #2f3135;
+  border-radius: 5px;
+  margin-left: 350px;
+  margin-bottom: 10px;
+  width: 50%;
+
+}
+.form > input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline-width: 0;
+  height: 40px;
+  font-size: 20px;
+  padding: 10px;
+}
+.chatInputIcon > .MuiSvgIcon-root {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.chatMessages {
+  flex: 1;
+}
+.chatInputButton {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 90px;
+}
+
+.chatInputButton:hover {
+  background-color: #45a049; /* Darker green background color on hover */
 }

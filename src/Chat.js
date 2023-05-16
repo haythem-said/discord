@@ -1,12 +1,32 @@
-import React from 'react'
-import ChatHeader from './ChatHeader'
-
+import React from "react";
+import ChatHeader from "./ChatHeader";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import GifIcon from "@mui/icons-material/Gif";
+import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 const Chat = () => {
   return (
-    <div className='chat'> 
-       <ChatHeader />
-    </div>
-  )
-}
+    <div className="chat">
+      <ChatHeader />
 
-export default Chat
+      <div className="chatMessages">
+        
+      </div>
+
+      <div className="chatInput">
+        <form className="form">
+          <input type="text" placeholder="Message"></input>
+        </form>
+        <button className="chatInputButton" type="submit">
+          SendMessage
+        </button>
+        <div className="chatInputIcon">
+        <GifIcon />
+        <InsertEmoticonIcon />
+        </div>
+       
+      </div>
+    </div>
+  );
+};
+
+export default Chat;
