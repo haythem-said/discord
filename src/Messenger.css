@@ -1,17 +1,18 @@
-.message{
-    margin: 30px;
-    display: flex;
-    
+.message {
+  margin: 30px;
+  display: flex;
+  align-items: center;
 }
 
-.messengerInfo{
-    color: white;
-    align-items: center;
-    display: flex;
-    margin-top: -20px;
-    margin-left: 15px;
+.messengerInfo {
+  color: white;
+  margin-left: 15px;
+  padding: 10px;
 }
 
-.messengerInfo > span{
-    color: darkgray;
+.messageTimes {
+  color: darkgray;
+  margin-left: 30px;
+  font-size: 12px;
+  padding: 10px;
 }
