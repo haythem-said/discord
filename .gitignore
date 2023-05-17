@@ -8,7 +8,7 @@ package.json
 package-lock.json
 # testing
 /coverage
-
+Firebase.js
 # production
 /build
 
