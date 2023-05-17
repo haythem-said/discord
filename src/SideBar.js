@@ -9,11 +9,16 @@ import MicIcon from "@mui/icons-material/Mic";
 import HeadsetIcon from "@mui/icons-material/Headset";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Avatar } from "@mui/material";
+import { useSelector } from "react-redux";
+import {selectUsers} from "./features/userSlice";
+
+
 const SideBar = (props) => {
+  const user = useSelector(selectUsers);
   return (
     <div className="sideBar">
       <div className="sideBar__top">
-        <h3>Discord Haythem </h3>
+        <h3>Discord {user.displayName} </h3>
         <KeyboardArrowDownIcon />
       </div>
       <div className="sidebar__channels">
@@ -45,7 +50,7 @@ const SideBar = (props) => {
       </div>
       <div className="voice">
         <div className="nameProfile">
-          <Avatar src="images/user.jpg" />
+          <Avatar src={user.photo} />
         </div>
         <div className="equqipement">
           <span>Haythem</span> said
