@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import AddIcon from "@mui/icons-material/Add";
 import SideBarChannel from "./SideBarChannels";
@@ -10,11 +10,32 @@ import HeadsetIcon from "@mui/icons-material/Headset";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Avatar } from "@mui/material";
 import { useSelector } from "react-redux";
-import {selectUsers} from "./features/userSlice";
-
+import { selectUsers } from "./features/userSlice";
+import db, { auth } from "./Firebase";
 
 const SideBar = (props) => {
   const user = useSelector(selectUsers);
+  const [channels, setChannels] = useState([]);
+
+  const handelChannelAdd = () => {
+    const channelName = prompt("Enter a new Channel Name");
+    if (channelName) {
+      db.collection("channels").add({
+        channelName: channelName,
+      });
+    }
+  };
+  useEffect(() => {
+    db.collection("channels").onSnapshot((snapshot) => {
+      setChannels(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          channel: doc.data(),
+        }))
+      );
+    });
+  });
+
   return (
     <div className="sideBar">
       <div className="sideBar__top">
@@ -27,12 +48,12 @@ const SideBar = (props) => {
             <KeyboardArrowDownIcon />
             <h4>Text Channels</h4>
           </div>
-          <AddIcon className="sideBar__AddChannel" />
+          <AddIcon onClick={handelChannelAdd} className="sideBar__AddChannel" />
         </div>
         <div className="sidebar__ChannelsList">
-          <SideBarChannel id="#" channel={"YouTube"} />
-          <SideBarChannel id="#" channel={"Twitter"} />
-          <SideBarChannel id="#" channel={"Linkedin"} />
+          {channels.map(({id,channel}) => {
+             <SideBarChannel id={id} channelName={channel.channelName} />;
+          })}
         </div>
       </div>
       <div className="voice">
@@ -50,7 +71,7 @@ const SideBar = (props) => {
       </div>
       <div className="voice">
         <div className="nameProfile">
-          <Avatar src={user.photo} />
+          <Avatar onClick={() => auth.signOut()} src={user.photo} />
         </div>
         <div className="equqipement">
           <span>Haythem</span> said

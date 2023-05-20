@@ -1,10 +1,10 @@
 import React from 'react'
 
-const SideBarChannel = ({id,channel}) => {
+const SideBarChannel = ({ id,channelName }) => {
   return (
     <div className='sidebarChannel'>
       <h4>
-        <span className='sidebarChannel__hash'>{id}</span> {channel}
+        <span className='sidebarChannel__hash'>{id}</span> {channelName}
       </h4>
     </div>
   )

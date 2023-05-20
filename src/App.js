@@ -20,7 +20,7 @@ function App() {
           email:authUser.email
          }))
       }else {
-       // logout
+       dispatch(logout())
       }
      })
   },[dispatch])
